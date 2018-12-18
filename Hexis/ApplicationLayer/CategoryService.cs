@@ -77,7 +77,7 @@ namespace Hexis.ApplicationLayer
         {
             var category = await _unitOfWork.SetCategoryRepository().GetByIdAsync(id);
             if (category == null)
-                throw new ApplicationException($"Category with Id {category.Id} not found.");
+                throw new ApplicationException($"Category with Id {id} not found.");
 
             var product = await _unitOfWork.SetProductRepository().GetByCategoryIdAsync(id);
             if(product?.Count() > 0)

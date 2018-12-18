@@ -103,7 +103,7 @@ namespace Hexis.ApplicationLayer
             var product = await _unitOfWork.SetProductRepository().GetByIdAsync(id);
 
             if (product == null)
-                throw new ApplicationException($"Category with Id {product.Id} not found.");
+                throw new ApplicationException($"Category with Id {id} not found.");
 
             product.Stock = product.Stock + quantity;
 
@@ -116,7 +116,7 @@ namespace Hexis.ApplicationLayer
             var product = await _unitOfWork.SetProductRepository().GetByIdAsync(id);
 
             if (product == null)
-                throw new ApplicationException($"Category with Id {product.Id} not found.");
+                throw new ApplicationException($"Category with Id {id} not found.");
 
             if (product.Stock - quantity < 0)
                 throw new ApplicationException($"You have only {product.Stock} products in the stock.");
@@ -134,7 +134,7 @@ namespace Hexis.ApplicationLayer
             var product = await _unitOfWork.SetProductRepository().GetByIdAsync(id);
 
             if (product == null)
-                throw new ApplicationException($"Product with Id {product.Id} not found.");
+                throw new ApplicationException($"Product with Id {id} not found.");
 
             _unitOfWork.SetProductRepository().Remove(product);
             return await _unitOfWork.SaveAsync();

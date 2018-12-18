@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Migrations\20181216093246_Initial.Designer.cs">
+      <DependentUpon>20181216093246_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Migrations\20181217164841_DisableCascade.Designer.cs">
+      <DependentUpon>20181217164841_DisableCascade.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Migrations\20181217170743_TimeStamp.Designer.cs">
+      <DependentUpon>20181217170743_TimeStamp.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

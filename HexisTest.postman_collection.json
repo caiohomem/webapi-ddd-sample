@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "d77dd133-acc8-4c17-b1f0-0888077b3778",
+		"name": "HexisTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GetAllPaged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/category/3/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"category",
+								"3",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\" : \"0\",\r\n\t\"name\" : \"Category 6\"\r\n} "
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\" : \"1\",\r\n\t\"name\" : \"Category 10\"\r\n} "
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/category/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"category",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "GetAllPaged",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/product/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"product",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\" : \"0\",\r\n\t\"name\" : \"Product 2\",\r\n\t\"categoryId\" : \"1\",\r\n\t\"description\" : \"Description 2\",\r\n\t\"price\" : \"110.12\",\r\n\t\"stock\" : 5\r\n} "
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\" : \"2\",\r\n\t\"name\" : \"Product 1\",\r\n\t\"categoryId\" : \"2\",\r\n\t\"description\" : \"Description 22222\",\r\n\t\"price\" : \"110.16\",\r\n\t\"stock\" : 7\r\n} "
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/product/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IncreaseStock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/product/increase/1/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"product",
+								"increase",
+								"1",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DecreaseStock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5242/api/product/decrease/1/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5242",
+							"path": [
+								"api",
+								"product",
+								"decrease",
+								"1",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
